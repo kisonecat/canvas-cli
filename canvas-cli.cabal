@@ -1,0 +1,16 @@
+name:           canvas-cli
+version:        0.1.0.0
+synopsis:       CLI utility to process .tex files and upload resulting .pdf and .html files
+homepage:       https://example.com
+license:        MIT
+license-file:   LICENSE
+author:         Your Name
+maintainer:     your.email@example.com
+category:       CLI
+build-type:     Simple
+cabal-version:  >=1.10
+
+executable canvas-cli
+  main-is:          Main.hs
+  build-depends:    base >=4.8 && <5, directory, process, http-conduit, pandoc
+  default-language: Haskell2010
