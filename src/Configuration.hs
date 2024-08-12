@@ -5,7 +5,9 @@ import Data.Text
 
 -- Define a configuration type
 data Configuration = Configuration
-  { canvasConfig :: Canvas.Configuration
+  { token :: Text,
+    apiBase :: Text,
+    canvasConfig :: Canvas.Configuration
   , courseId :: Text
   }
 

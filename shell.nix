@@ -26,6 +26,7 @@ let
     haskell-language-server
     #haskellPackages.haskell-language-server
     hlint
+    haskellPackages.apply-refact
   ];
 
   myShellHook = ''
