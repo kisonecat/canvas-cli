@@ -10,7 +10,7 @@ let
   });
 
   myHaskellPkgsOverlay = (hSelf: hSuper: {
-    canvas-cli = hSelf.callCabal2nix "canvas-cli" ./. {};
+    canvas = hSelf.callCabal2nix "canvas" ./. {};
 
     canvas-haskell = hSelf.callCabal2nix "canvas-haskell" (myNixPkgs.lib.cleanSourceWith {
       src = builtins.fetchGit {
@@ -32,7 +32,7 @@ let
     alias repl="cabal new-repl"
   '';
 in
-myNixPkgs.myHaskellPackages.canvas-cli.env.overrideAttrs (oldEnv: {
+myNixPkgs.myHaskellPackages.canvas.env.overrideAttrs (oldEnv: {
   nativeBuildInputs = oldEnv.nativeBuildInputs ++ myDevTools;
   shellHook = myShellHook;
 })
